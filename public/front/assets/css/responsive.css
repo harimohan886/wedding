@@ -1,0 +1,159 @@
+/* only small desktops */
+/* tablets */
+@media (min-width: 992px) and (max-width: 1190px) {
+
+	.top-header .navbar .navbar-collapse ul li a{
+		font-size: 14px;
+	}
+
+}
+/* only small tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+	.top-header .navbar .navbar-collapse ul li a{
+		padding: 5px 15px;
+	}
+	.about-img{
+		margin-bottom: 30px;
+		margin-top: 30px;
+	}
+	.gallery-box ul li{
+		width: 33.33%;
+	}
+	.top-header{
+		position: relative;
+	}
+
+
+}
+
+/* mobile or only mobile */
+@media (max-width: 767px) {
+	.navbar-brand{
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.top-header .navbar .navbar-collapse ul li a{
+		padding: 5px 15px;
+	}
+	.title-box h2{
+		font-size: 38px;
+	}
+	.about-main-info h2{
+		font-size: 24px;
+	}
+	.about-img{
+		margin-bottom: 30px;
+	}
+	.main-timeline-box .separline::before{
+		left: 15px !important;
+	}
+	.main-timeline-box .iconBackground{
+		left: 15px !important;
+	}
+	.main-timeline-box .timeline-text-content{
+		margin-left: 0px;
+	}
+	.main-timeline-box .reverse .timeline-text-content{
+		margin-right: 0px;
+	}
+	.main-timeline-box .time-line-date-content{
+		margin-right: 0px;
+	}
+	.main-timeline-box .time-line-date-content p{
+		float: left;
+	}
+	.main-timeline-box .timeline-element{
+		padding: 0px 15px;
+	}
+	.gallery-box ul li{
+		width: 50%;
+	}
+	.top-header{
+		position: relative;
+	}
+
+	.about-m{
+		margin-bottom: 30px;
+	}
+	.timeLine .row .item{
+		margin-bottom: 30px;
+	}
+}
+
+
+
+@media screen and (min-width:1024px) and (max-width:1199px) {
+	.about-img img {
+		height: 461px;
+	}
+
+}
+
+
+
+@media screen and (max-width:991px) {
+	.gallery-page-box {
+		padding: 19px 0px;
+		margin-top: 3px;
+	}
+	.gallery-page-detail-box{
+		padding: 19px 0px;
+		margin-top: 3px;
+	}
+	.about-box {
+		padding: 19px 0px;
+		background: url(../images/ptn-bg.jpg);
+		margin-top: -80px;
+	}
+
+	.about-box1 {
+		padding: 19px 0px;
+		background: url(../images/ptn-bg.jpg);
+		margin-top: -119px;
+	}
+	.privacy-page-box {
+		padding: 19px 0px;
+		margin-top: 3px;
+	}
+	.faq {
+		padding: 19px 0px;
+		margin-top: 3px;
+	}
+	.aboutpagebox {
+		padding: 19px 6px;
+		margin-top: 0px;
+	}
+}
+
+
+@media screen and (max-width:576px){
+	.contact-block h2{
+		font-size: 25px; /* Replace #007bff with your primary color code */
+	}
+	.contact-block .form-group{
+		margin: 10px 20px;
+	}
+}
+
+@media screen and (min-width:992px) and (max-width:1200px){
+	.whycorbetimage {
+	height: 380px;
+	width: 100%;
+}
+.aboutpageimage{
+	height: 350px;
+	width: 100%;
+}
+
+}
+@media screen and (min-width:1200px) and (max-width:1399px){
+	.whycorbetimage {
+	height: 324px;
+	width: 100%;
+}
+.aboutpageimage{
+	height: 297px;
+	width: 100%;
+}
+
+}

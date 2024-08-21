@@ -1,0 +1,42 @@
+version: '3.3'
+
+services:
+  laravel-app:
+    build: .
+    ports:
+      - "8001:8001"
+    volumes:
+      - .:/var/www
+    networks:
+      - laravel
+    environment:
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_DATABASE: test
+      DB_USERNAME: test
+      DB_PASSWORD: test
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - jim-corbett-wedding-21-aug.sql /docker-entrypoint-initdb.d/init.sql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test
+    networks:
+      - laravel
+
+networks:
+  laravel:
+    driver: bridge
+
+volumes:
+  mysql_data:
+    driver: local
+

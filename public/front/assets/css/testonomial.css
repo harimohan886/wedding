@@ -1,0 +1,130 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.figure-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+figure.snip1390 {
+  font-family: 'Roboto', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 303px;
+  max-width: 315px;
+  width: 100%;
+  color: #000000;
+  text-align: center;
+  font-size: 16px;
+  background-color: var(--secondary);
+  padding: 30px;
+  background-image: linear-gradient(-25deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+  box-sizing: border-box;
+}
+
+figure.snip1390 *,
+figure.snip1390 *:before,
+figure.snip1390 *:after {
+  box-sizing: border-box;
+  transition: all 0.35s ease;
+}
+
+figure.snip1390 figcaption {
+  width: 100%;
+}
+
+figure.snip1390 h2,
+figure.snip1390 h4,
+figure.snip1390 blockquote {
+  margin: 0;
+}
+
+figure.snip1390 h2,
+figure.snip1390 h4 {
+  font-weight: 300;
+}
+
+figure.snip1390 h2 {
+  color: #ffffff;
+}
+
+figure.snip1390 h4 {
+  color: #a6a6a6;
+}
+
+figure.snip1390 blockquote {
+  font-size: 1em;
+  padding: 45px 20px 40px 50px;
+  margin-top: 30px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: inset -1.4px -1.4px 2px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  position: relative;
+}
+
+figure.snip1390 blockquote:before {
+  font-family: 'FontAwesome';
+  content: "\201C";
+  position: absolute;
+  font-size: 70px;
+  opacity: 0.25;
+  font-style: normal;
+  top: 0px;
+  left: 20px;
+}
+
+figure.snip1390 .profile {
+  width: 100px;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.4);
+  margin-bottom: 10px;
+  border: solid 5px var(--primary);
+}
+
+button.prev{
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  /* border-radius: 50%; */
+}
+
+ button.next {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  /* border-radius: 50%; */
+  
+}
+button.prev {
+  left: 0;
+}
+
+button.next {
+  right: 0;
+}

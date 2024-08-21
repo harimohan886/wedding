@@ -1,0 +1,313 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.quiryform {
+    width: 300px;
+    margin: -65px auto;
+    padding: 10px 20px;
+    background: #ffff;
+    border-radius: 8px;
+    border: 1px solid black;
+    position: absolute;
+    z-index: 3;
+    color: black;
+}
+
+/* form {
+    width: 300px;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    border: 1px solid black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+} */
+
+.title {
+    /* margin: 0 0 5px 0; */
+    text-align: center;
+    /* padding-top: 7px; */
+    font-weight: 600;
+
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    font-size: 12px;
+    height: auto;
+    margin-bottom: 1px;
+    outline: 0;
+    padding: 3px 12px;
+    width: 100%;
+    background-color: #ffff;
+    color: #988aa0;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    border-radius: 5px;
+    border: 1px solid rgb(15, 10, 14);
+}
+
+/* Add border color on focus */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+textarea:focus,
+select:focus {
+    border: 1px solid var(--primary);
+    /* Change this color as needed */
+    box-shadow: 0 0 0 2px rgba(245, 8, 233, 0.3);
+    /* Optional: Add a shadow effect for better visibility */
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin: 0 4px 8px 0;
+}
+
+select {
+    padding: 6px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.submitbutton {
+    color: #FFF;
+    background-color: var(--secondary);
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid var(--primary);
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    margin-bottom: 10px;
+}
+
+.submitbutton:hover {
+
+    background-color: var(--primary);
+
+}
+
+fieldset {
+    margin-bottom: 10px;
+    border: none;
+}
+
+legend {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 0px;
+    padding-left: 10px !important;
+    font-weight: 550;
+    font-size: 14px;
+}
+
+label.light {
+    font-weight: 300;
+    display: inline;
+}
+
+
+
+
+.customrange1 {
+    width: 175px;
+}
+
+
+@media screen and (min-width: 1200px) and (max-width:1440px) {
+    .quiryform {
+        width: 450px;
+        margin: -9px -13px;
+    }
+
+}
+
+
+/* @media screen and (min-width: 1440px) {
+	.quiryform {
+        width: 450px;
+        margin: -45px -76px;
+    }
+
+  } */
+@media screen and (min-width: 1440px) {
+    .quiryform {
+        width: 450px;
+        margin: 60px -20px;
+    }
+
+}
+
+/* @media screen and (min-width: 768px) and (max-width:992px) {
+    form {
+        width: 392px;
+        margin: -65px -35px;
+    }
+} */
+
+
+@media screen and (min-width: 768px) and (max-width:1024px) {
+    .customrange1 {
+        width: 145px;
+    }
+}
+
+
+.rating-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Align label and stars to the start of the container */
+}
+
+.rating {
+    border: none;
+    float: left;
+}
+
+.rating>input {
+    display: none;
+}
+
+.rating>label:before {
+    font-size: 1.25em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005";
+}
+
+.rating>.half:before {
+    content: "\f089";
+    position: absolute;
+}
+
+.rating>label {
+    color: #df26ae54;
+    float: right;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating>input:checked~label,
+/* show gold star when clicked */
+.rating:not(:checked)>label:hover,
+/* hover current star */
+.rating:not(:checked)>label:hover~label {
+    color: #FFD700;
+}
+
+/* hover previous stars in list */
+
+.rating>input:checked+label:hover,
+/* hover current star when changing rating */
+.rating>input:checked~label:hover,
+.rating>label:hover~input:checked~label,
+/* lighten current selection */
+.rating>input:checked~label:hover~label {
+    color: #FFED85;
+}
+
+.budget-container {
+    display: flex;
+    align-items: center;
+    /* Adjust the space between elements */
+}
+
+/* Slider Styles */
+/* input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 7px;
+    border-radius: 8px;
+    background: #ddd;
+    outline: none;
+    transition: background 450ms ease-in;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: var(--primary);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: var(--primary);
+    cursor: pointer;
+    border-radius: 50%;
+} */
+
+#budgetRange {
+    background: linear-gradient(to right, var(--primary) 0%, var(--primary) 0%, #fff 0%, #fff 100%);
+}
+
+#guestsRange {
+    background: linear-gradient(to right, var(--primary) 0%, var(--primary) 0%, #fff 0%, #fff 100%);
+}
+
+#roomsRange {
+    background: linear-gradient(to right, var(--primary) 0%, var(--primary) 0%, #fff 0%, #fff 100%);
+}
+
+/* Container Styles */
+.budget-container,
+.guestsValuecontainer,
+.room-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.budget-value,
+.guests-value,
+.room-value {
+    display: inline-block;
+    padding: 1px 10px;
+    background-color: var(--lightform);
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+    margin-top: 5px;
+}
